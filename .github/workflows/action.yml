@@ -92,6 +92,5 @@ jobs:
       - name: Deploy to EKS ( Deploying simple html app )
         run: |
           kubectl apply -f todoapp-deployment.yaml
-          kubectl apply -f istio-traffic-management.yml
           kubectl get nodes -o wide
           
