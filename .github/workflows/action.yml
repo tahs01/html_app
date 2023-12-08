@@ -75,15 +75,15 @@ jobs:
 
       - name: Configure AWS credentials
         run: |
-          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}  #Replace with your access key id
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} #Replace with your access key
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region us-east-2 # Set your AWS region
         env:
          AWS_DEFAULT_REGION: us-east-2
 
       - name: Create EKS Cluster
         run: |
-          eksctl create cluster --name=eks-todoapp --nodes=1 --kubeconfig=./ --region=us-east-2 --profile=thanhtikesoe-noc
+          eksctl create cluster --name=eks-todoapp --nodes=1 --kubeconfig=./ --region=us-east-2
 
 
       - name: Authenticate with EKS ( Authentication to eks cluster )
