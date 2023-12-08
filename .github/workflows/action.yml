@@ -89,8 +89,9 @@ jobs:
       - name: Authenticate with EKS ( Authentication to eks cluster )
         run: aws eks update-kubeconfig --name eks-html-app
 
-      - name: Deploy to EKS ( Deploying simple python app )
+      - name: Deploy to EKS ( Deploying simple html app )
         run: |
           kubectl apply -f todoapp-deployment.yaml
           kubectl apply -f istio-traffic-management.yml
           kubectl get nodes -o wide
+          
