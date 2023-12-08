@@ -83,11 +83,11 @@ jobs:
 
       - name: Create EKS Cluster
         run: |
-          eksctl create cluster --name=eks-todoapp --nodes=1 --kubeconfig=./ --region=us-east-2 --profile=thanhtikesoe-noc
+          eksctl create cluster --name=eks-html-app --nodes=1 --kubeconfig=./ --region=us-east-2
 
 
       - name: Authenticate with EKS ( Authentication to eks cluster )
-        run: aws eks update-kubeconfig --name eks-test
+        run: aws eks update-kubeconfig --name eks-html-app
 
       - name: Deploy to EKS ( Deploying simple python app )
         run: |
