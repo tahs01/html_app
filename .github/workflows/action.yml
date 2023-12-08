@@ -83,7 +83,7 @@ jobs:
 
       - name: Create EKS Cluster
         run: |
-          eksctl create cluster --name=eks-todoapp --nodes=1 --kubeconfig=./ --region=us-east-2
+          eksctl create cluster --name=eks-todoapp --nodes=1 --kubeconfig=./ --region=us-east-2 --profile=thanhtikesoe-noc
 
 
       - name: Authenticate with EKS ( Authentication to eks cluster )
